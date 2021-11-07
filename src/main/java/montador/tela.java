@@ -233,11 +233,16 @@ public class tela extends javax.swing.JFrame {
 
     private void carregarArquivoButtonActionPerformed(java.awt.event.ActionEvent evt) {                                                      
                                                                                         // Carrega código fonte para interface e para variavel arquivoCarregado
+        
+        ProcessadorDeMacro processador = new ProcessadorDeMacro("entrada");
+        processador.processa();
+
         String linha = new String();
         //System.out.println("teste = " + System.getProperty("user.dir"));
-        String CaminhoDoArquivo = new String(System.getProperty("user.dir")+"/src/main/java/montador/entrada.txt");
+        String CaminhoDoArquivo = new String(System.getProperty("user.dir")+"/src/main/java/montador/entradaExpandida.txt");
         BufferedReader buffRead; //reader do arquivo
         
+    
         try {
             buffRead = new BufferedReader(new FileReader(CaminhoDoArquivo));
                   
