@@ -201,8 +201,8 @@ public class tela extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(buttonSegundaPassagem, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(codigoFonteLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(codigoFonteLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(codigoFonteLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -232,13 +232,12 @@ public class tela extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void carregarArquivoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carregarArquivoButtonActionPerformed
-        
+                                                                                        // Carrega código fonte para interface e para variavel arquivoCarregado
         String linha = new String();
         //System.out.println("teste = " + System.getProperty("user.dir"));
         String CaminhoDoArquivo = new String(System.getProperty("user.dir")+"/src/main/java/montador/entrada.txt");
         BufferedReader buffRead; //reader do arquivo
         
-    
         try {
             buffRead = new BufferedReader(new FileReader(CaminhoDoArquivo));
                   
@@ -258,7 +257,7 @@ public class tela extends javax.swing.JFrame {
     }//GEN-LAST:event_carregarArquivoButtonActionPerformed
 
     private void ButtonPrimeiraPassagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPrimeiraPassagemActionPerformed
-        try{
+        try{                                                                               // Carrega código fonte e transforma em intermediario
             montador.primeira_passagem();
             System.out.println("Button actioned ");
             jListIntermediario.setModel(listIntermediarioModel);
@@ -269,7 +268,7 @@ public class tela extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonPrimeiraPassagemActionPerformed
 
     private void buttonSegundaPassagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSegundaPassagemActionPerformed
-        
+                                                                                            //Carrega código intermediario e transforma em final
         String linha = new String();
         //System.out.println("teste = " + System.getProperty("user.dir"));
         String CaminhoDoArquivo = new String(System.getProperty("user.dir")+"/src/main/java/montador/firstPass.txt");
