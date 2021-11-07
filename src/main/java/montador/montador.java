@@ -40,22 +40,17 @@ public class montador {
     }
     
     
-    public static void print_simbolos() {
-
-        /*Map.Entry<String, Simbolo> entry = simbolos.entrySet().iterator().next();
-        String key = new String();
-        Simbolo symbol = new Simbolo();*/
-        //simbolos.put("nome", new Simbolo("valor","type", true));      
+    public static void print_simbolos() {  // Printa simbolos (variaveis e constantes) na tabela de simbolos com seus valores
+     
         for (String keys : simbolos.keySet()){
-            //key = entry.getKey();
-            //symbol = entry.getValue();
+ 
             System.out.println(keys + "simbolos.get(key).getValue()");
             tela.symbolTableModel.addElement(keys + " = " + simbolos.get(keys).getValue());
 
         }               
     }
     
-    public static String getSymbolValue(String opd) {
+    public static String getSymbolValue(String opd) { 
         
         String value;
         value = simbolos.get(opd).getValue();
@@ -63,7 +58,7 @@ public class montador {
         return value;
     }
     
-    public static void loadInstructionToFirstPass() throws IOException{
+    public static void loadInstructionToFirstPass() throws IOException{  // Primeira passada (Falta resolver código dos simbolos)
         
         System.out.println("loadIstruction ");
         String codigoIntermediario = new String();
@@ -316,7 +311,7 @@ public class montador {
         print_simbolos(); // Printa na interface na tabela de símbolos
     }
     
-    public static void loadInstructionToSecondPass() throws IOException{
+    public static void loadInstructionToSecondPass() throws IOException{ // Segunda passada (Falta passar endereço das variaveis)
         
         System.out.println("loadFinalIstruction ");
         String finalCode = new String();
@@ -432,7 +427,7 @@ public class montador {
         
         
     }
-    public static void writeFirstPassInFile(String string) throws IOException{
+    public static void writeFirstPassInFile(String string) throws IOException{ // Escreve primeira passada em um arquivo .txt e exibe na interface
         System.out.println("writeFirstPassInFile ");
         FileWriter fw = new FileWriter(new File(new String(System.getProperty("user.dir")+"/src/main/java/montador/firstPass.txt")));
         fw.write(string);
@@ -444,7 +439,7 @@ public class montador {
         }
     }
     
-    public static void writeSecondPassInFile(String string) throws IOException{
+    public static void writeSecondPassInFile(String string) throws IOException{ // Escreve segunda passada em um arquivo .txt e exibe na interface
         System.out.println("writeFirstPassInFile ");
         FileWriter fw = new FileWriter(new File(new String(System.getProperty("user.dir")+"/src/main/java/montador/saida.txt")));
         fw.write(string);
