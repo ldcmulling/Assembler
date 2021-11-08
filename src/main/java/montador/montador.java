@@ -427,7 +427,9 @@ public class montador {
         
         
     }
-    public static void writeFirstPassInFile(String string) throws IOException{ // Escreve primeira em um arquivo .txt e exibe na interface
+
+    public static void writeFirstPassInFile(String string) throws IOException{ // Escreve primeira passada em um arquivo .txt e exibe na interface
+
         System.out.println("writeFirstPassInFile ");
         FileWriter fw = new FileWriter(new File(new String(System.getProperty("user.dir")+"/src/main/java/montador/firstPass.txt")));
         fw.write(string);
@@ -439,7 +441,8 @@ public class montador {
         }
     }
     
-    public static void writeSecondPassInFile(String string) throws IOException{ // Escreve segunda em um arquivo .txt e exibe na interface
+    public static void writeSecondPassInFile(String string) throws IOException{ // Escreve segunda passada em um arquivo .txt e exibe na interface
+
         System.out.println("writeFirstPassInFile ");
         FileWriter fw = new FileWriter(new File(new String(System.getProperty("user.dir")+"/src/main/java/montador/saida.txt")));
         fw.write(string);

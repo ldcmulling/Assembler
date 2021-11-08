@@ -1,3 +1,4 @@
+
 var1 DW 111
 var2 DW 222
 var3 DW 333
@@ -7,13 +8,10 @@ var6 EQU 666
 var7 EQU 777
 var8 DW 888
 
-SomaMem MACRO Mem1, Mem2 ;; Soma duas variáveis
+
 push AX
 pop AX
 add AX,DX
-ENDM
-
-SomaMem 2,3
 
 add AX,AX
 add AX,DX
