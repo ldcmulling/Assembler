@@ -17,7 +17,7 @@ import javax.swing.DefaultListModel;
  *
  * @author kevin
  */
-public class tela extends javax.swing.JFrame {
+public class Tela extends javax.swing.JFrame {
     
     public static String ArquivoCarregado = new String("") ;
     protected static DefaultListModel<String> listIntermediarioModel = new DefaultListModel<>();
@@ -26,9 +26,9 @@ public class tela extends javax.swing.JFrame {
     /**
      * Creates new form tela
      */
-    public tela() {
+    public Tela() {
         initComponents();
-        montador.print_simbolos();
+        Montador.print_simbolos();
     }
 
     /**
@@ -113,7 +113,7 @@ public class tela extends javax.swing.JFrame {
                 try {
                     carregarArquivoButtonActionPerformed(evt);
                 } catch (IOException ex) {
-                    Logger.getLogger(tela.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Tela.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });
@@ -259,16 +259,16 @@ public class tela extends javax.swing.JFrame {
 
             buffRead.close();
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(tela.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Tela.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(tela.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Tela.class.getName()).log(Level.SEVERE, null, ex);
         }
     }                                                     
 
     private void ButtonPrimeiraPassagemActionPerformed(java.awt.event.ActionEvent evt) {                                                       
 
         try{                                                                               // Carrega código fonte e transforma em intermediario
-            montador.primeira_passagem();
+            Montador.primeira_passagem();
             System.out.println("Button actioned ");
             jListIntermediario.setModel(listIntermediarioModel);
             jListSimbolos.setModel(symbolTableModel);
@@ -295,13 +295,13 @@ public class tela extends javax.swing.JFrame {
             }
             buffRead.close();
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(tela.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Tela.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(tela.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Tela.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         try{
-            montador.segunda_passagem();
+            Montador.segunda_passagem();
             System.out.println("Button actioned ");
             jListSaida.setModel(listSaidaModel);
         } catch(IOException e){ 
@@ -326,19 +326,19 @@ public class tela extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new tela().setVisible(true);
+            new Tela().setVisible(true);
         });
     }
 

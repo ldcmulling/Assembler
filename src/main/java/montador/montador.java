@@ -18,7 +18,7 @@ import java.util.List;
 
 
 
-public class montador {
+public class Montador {
     public static LinkedHashMap<String, Simbolo> simbolos = new LinkedHashMap<String, Simbolo>();    //Linked NÃO perde a ordem que foi acrescentado    
     static public List<String> instrucoes = new ArrayList<String>();
     
@@ -26,7 +26,7 @@ public class montador {
     public static void primeira_passagem() throws IOException {
         
         System.out.println("primeira_passagem ");
-        instrucoes = Arrays.asList(tela.ArquivoCarregado.split("\n"));
+        instrucoes = Arrays.asList(Tela.ArquivoCarregado.split("\n"));
         loadInstructionToFirstPass();
         //simbolos.put("valor", new Simbolo("valor","type", true));
     }
@@ -34,7 +34,7 @@ public class montador {
     public static void segunda_passagem() throws IOException {
         
         System.out.println("segunda_passagem ");
-        instrucoes = Arrays.asList(tela.ArquivoCarregado.split("\n"));
+        instrucoes = Arrays.asList(Tela.ArquivoCarregado.split("\n"));
         loadInstructionToSecondPass();
         //simbolos.put("nome", new Simbolo("valor","type", true));
     }
@@ -45,7 +45,7 @@ public class montador {
         for (String keys : simbolos.keySet()){
  
             System.out.println(keys + "simbolos.get(key).getValue()");
-            tela.symbolTableModel.addElement(keys + " = " + simbolos.get(keys).getValue());
+            Tela.symbolTableModel.addElement(keys + " = " + simbolos.get(keys).getValue());
 
         }               
     }
@@ -437,7 +437,7 @@ public class montador {
         
         String[] vetor = string.split("\n");
         for (int i = 0; i < vetor.length; i++){     // Para adiciona texto intermediario na interface
-            tela.listIntermediarioModel.addElement(vetor[i]);
+            Tela.listIntermediarioModel.addElement(vetor[i]);
         }
     }
     
@@ -450,7 +450,7 @@ public class montador {
         
         String[] vetor = string.split("\n");
         for (int i = 0; i < vetor.length; i++){     // Para adiciona texto intermediario na interface
-            tela.listSaidaModel.addElement(vetor[i]);
+            Tela.listSaidaModel.addElement(vetor[i]);
         }
     }
             
