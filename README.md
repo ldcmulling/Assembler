@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Trabalho final de PS
 ## Participantes:
 ### Kevin
@@ -8,8 +7,4 @@
 ### Uber
 ### Renã
 ### Victor
-
-=======
-# Assembler
->>>>>>> parent of 5db8592 (Update README.md)
  
