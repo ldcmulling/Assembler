@@ -26,7 +26,8 @@ public class Montador {
     public static void primeira_passagem() throws IOException {
         
         System.out.println("primeira_passagem ");
-        instrucoes = Arrays.asList(Tela.ArquivoCarregado.split("\n"));
+        System.out.println("hauhauahua ");
+        instrucoes = Arrays.asList(Tela2.ArquivoCarregado.split("\n"));
         loadInstructionToFirstPass();
         //simbolos.put("valor", new Simbolo("valor","type", true));
     }
@@ -34,7 +35,7 @@ public class Montador {
     public static void segunda_passagem() throws IOException {
         
         System.out.println("segunda_passagem ");
-        instrucoes = Arrays.asList(Tela.ArquivoCarregado.split("\n"));
+        instrucoes = Arrays.asList(Tela2.ArquivoCarregado.split("\n"));
         loadInstructionToSecondPass();
         //simbolos.put("nome", new Simbolo("valor","type", true));
     }
@@ -45,7 +46,7 @@ public class Montador {
         for (String keys : simbolos.keySet()){
  
             System.out.println(keys + "simbolos.get(key).getValue()");
-            Tela.symbolTableModel.addElement(keys + " = " + simbolos.get(keys).getValue());
+            Tela2.symbolTableModel.addElement(keys + " = " + simbolos.get(keys).getValue());
 
         }               
     }
@@ -437,7 +438,7 @@ public class Montador {
         
         String[] vetor = string.split("\n");
         for (int i = 0; i < vetor.length; i++){     // Para adiciona texto intermediario na interface
-            Tela.listIntermediarioModel.addElement(vetor[i]);
+            Tela2.listIntermediarioModel.addElement(vetor[i]);
         }
     }
     
@@ -450,7 +451,7 @@ public class Montador {
         
         String[] vetor = string.split("\n");
         for (int i = 0; i < vetor.length; i++){     // Para adiciona texto intermediario na interface
-            Tela.listSaidaModel.addElement(vetor[i]);
+            Tela2.listSaidaModel.addElement(vetor[i]);
         }
     }
             

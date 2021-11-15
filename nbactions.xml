@@ -13,7 +13,7 @@
                 <exec.vmArgs></exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.appArgs></exec.appArgs>
-                <exec.mainClass>montador.Tela</exec.mainClass>
+                <exec.mainClass>montador.Tela2</exec.mainClass>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
