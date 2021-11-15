@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Iterator;
 
-class Processador {
+class ProcessaMacro {
 
 
     private int contadorMacroNivel = 0;
@@ -19,7 +19,7 @@ class Processador {
     private FileWriter arqSaida;
 
     // Construtor
-    public Processador(String input) throws FileNotFoundException, IOException{
+    public ProcessaMacro(String input) throws FileNotFoundException, IOException{
         this.input = input;
         this.macros = new HashMap<String, Macro>();
         this.bf = new BufferedReader(new FileReader(new String(System.getProperty("user.dir")+"/src/main/java/montador/" + input + ".txt")));
