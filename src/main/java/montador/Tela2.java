@@ -439,7 +439,7 @@ public class Tela2 extends javax.swing.JFrame {
         //System.out.println("teste = " + System.getProperty("user.dir"));
         String CaminhoDoArquivo = new String(System.getProperty("user.dir")+"/src/main/java/montador/firstPass.txt");
         BufferedReader buffRead; //reader do arquivo
-        ArquivoCarregado = "";
+        ArquivoCarregado = null;
     
         try {
             buffRead = new BufferedReader(new FileReader(CaminhoDoArquivo));
